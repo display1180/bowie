@@ -1,5 +1,9 @@
 @import 'reset';
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@400;700&display=swap');
+body {
+    font-family: 'Signika Negative', sans-serif;
 
+}
 nav {
     margin: 0 auto;
     display:flex;
@@ -7,11 +11,12 @@ nav {
     line-height:60px;
     align-items:center;
     position:fixed;
-    top:0;
+    top:20px;;
     width:100%;
     left:50%;
     transform:translateX(-50%);
     width:1200px;
+    color:#fff;
 
 
     
@@ -39,24 +44,77 @@ nav {
     }
     h6 {
         font-size:16px;
+        padding:0;
+        line-height:1em;
+        padding-bottom: 60px;
     }
 
-
+    & .sect_wrap {
+        max-width:1200px;
+        margin:0 auto;
+    }
+    
     &.sect1 {
         height:100vh;
         display:flex;
         justify-content:end;
-        background:#efefef;
+        background: url(/img/db-s1-bg.jpg) no-repeat center /cover;
+        color:#fff;
+        .sect_wrap {
+            display:flex;
+            flex-direction:column;
+            justify-content:flex-end;
+            padding-bottom: 100px;
+            h2 {
+                letter-spacing:0;
+            }
+            p {
+                font-size:42px;
+            }
+        }
+    }
+    &.sect2 {
+        padding: 180px;
+
+        p {
+            font-size:42px;
+        }
+    }
+    &.sect3 {
+        font-size: 72px ;
+
+        .row {
+            display:flex;
+            gap: 60px;
+        }
+    }
+    &.sect8 {
+        dl {
+            display:flex;
+            dd {
+                font-size: 42px;
+            }
+        }
     }
     &.sect9 {
-
+        
+        .sect_wrap {
+            width:80%;
+            max-width:none;
+        }
+        .motto {
+            padding: 100px 0;
+            background:url(/img/db-s10-bg.jpg) no-repeat center / cover;
+            color: #ff6c00;
+            font-size:120px;
+            line-height:1.2em;
+            text-align:center;
+        }
+        
     }
     footer {
         display:flex;
         justify-content:space-between;
+        line-height:70px;
     }
-}
-.sect_wrap {
-    max-width:1200px;
-    margin:0 auto;
 }
