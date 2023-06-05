@@ -68,7 +68,7 @@ nav .sect_wrap {
   height: 100vh;
   display: flex;
   justify-content: end;
-  background: url(/img/db-s1-bg.jpg) no-repeat center/cover;
+  background: url(../img/db-s1-bg.jpg) no-repeat center/cover;
   color: #fff;
 }
 .sect.sect1 .sect_wrap {
@@ -220,7 +220,7 @@ nav .sect_wrap {
 }
 .sect.sect9 .motto {
   padding: 100px 60px;
-  background: url(/img/db-s10-bg.jpg) no-repeat center/cover;
+  background: url(../img/db-s10-bg.jpg) no-repeat center/cover;
   color: #ff6c00;
   font-size: 84px;
   line-height: 1.2em;
