@@ -2,7 +2,7 @@ const artistWrap = document.querySelector('.sect8 .row');
 
 let tags = '';
 
-fetch('/DB/artists.json').then((res)=> {
+fetch('./DB/artists.json').then((res)=> {
     return res.json();
 })
 .then((data) => {
