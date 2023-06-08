@@ -129,6 +129,18 @@ nav .sect_wrap {
   height: 100vh;
   background: #ff6c00;
   padding: 180px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.sect.sect4 .sound {
+  font-size: 13vw;
+  white-space: nowrap;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .sect.sect5 {
   display: flex;

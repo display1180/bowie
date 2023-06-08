@@ -129,6 +129,20 @@ nav {
         height:100vh;
        background:$point;
        padding:180px 0;
+       display:flex;
+       justify-content:center;
+       align-items:center;
+       position:relative;
+       
+       .sound {
+        font-size: 13vw;
+        white-space:nowrap;
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%, -50%);
+
+       }
     }
 
     &.sect5 {
