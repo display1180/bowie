@@ -1,0 +1,17 @@
+.sub {
+    .sect{
+        &.video {
+            background:none;
+
+            .video-item {
+                display:flex;
+                flex-direction:column;
+            }
+        }
+    
+        h2 {
+            max-width:1200px;
+            margin:200px auto;
+        }
+    }
+}
