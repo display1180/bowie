@@ -32,12 +32,11 @@ function createList(arr) {
 		tags += `
         <article class="video-item">
         <div class='pic'>
-            <img class='thumb' src=${item.snippet.thumbnails.standard.url} alt=${
-			item.snippet.resourceId.videoId
-		} />
+            <img class='thumb' src=${item.snippet.thumbnails.standard.url} alt=${item.snippet.resourceId.videoId} />
           </div> 
-          <h3>${tit.length > 50 ? tit.substr(0, 50) + '...' : tit}</h3>
+          
           <div class='txt'>
+          <h3>${tit.length > 50 ? tit.substr(0, 50) + '...' : tit}</h3>
             <p>${desc.length > 200 ? desc.substr(0, 200) + '...' : desc}</p>
             <span>${date.split('T')[0].split('-').join('.')}</span>
           </div>  

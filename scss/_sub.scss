@@ -1,17 +1,19 @@
 .sub {
-    .sect{
-        &.video {
-            background:none;
-
-            .video-item {
-                display:flex;
-                flex-direction:column;
-            }
-        }
-    
+    .sect{    
         h2 {
             max-width:1200px;
             margin:200px auto;
+            letter-spacing:-0.03em;
         }
     }
+    
+
+}
+
+
+@media screen and (max-width: $tablet) {
+	h2 {
+        padding-left:2rem;
+    }
+
 }

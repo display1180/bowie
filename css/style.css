@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Roboto+Condensed:wght@700&display=swap");
 * {
   margin: 0;
@@ -403,16 +404,221 @@ a {
     font-size: 12px;
   }
 }
-.sub .sect.video {
-  background: none;
-}
-.sub .sect.video .video-item {
-  display: flex;
-  flex-direction: column;
-}
 .sub .sect h2 {
   max-width: 1200px;
   margin: 200px auto;
+  letter-spacing: -0.03em;
+}
+
+@media screen and (max-width: 1180px) {
+  h2 {
+    padding-left: 2rem;
+  }
+}
+.pop {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0px;
+  padding: 100px;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 1s;
+}
+.pop.on {
+  opacity: 1;
+}
+.pop .con {
+  width: 100%;
+  height: 100%;
+}
+.pop .con iframe,
+.pop .con video,
+.pop .con img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: none;
+}
+.pop .con img {
+  object-fit: contain;
+}
+.pop .close {
+  font: bold 14px/1 "arial";
+  color: #fff;
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  cursor: pointer;
+}
+
+.video .wrap .video-item {
+  display: flex;
+  gap: 30px;
+  padding-bottom: 120px;
+}
+.video .wrap .video-item .pic {
+  width: 50%;
+}
+.video .wrap .video-item .txt {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.video .wrap .video-item h3 {
+  font-size: 42px;
+  padding-bottom: 20px;
+}
+.video .wrap .video-item span {
+  padding-top: 20px;
+}
+.video .wrap .video-item img {
+  width: 100%;
+}
+
+@media screen and (max-width: 1180px) {
+  .video .wrap article h2 {
+    font-size: 28px;
+  }
+  .video .wrap article .txt {
+    width: 100%;
+    padding-right: 0px;
+  }
+  .video .wrap article .pic {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .video .wrap article .pic img {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 639px) {
+  .video .wrap .video-item {
+    flex-direction: column;
+  }
+  .video .wrap .video-item h2 {
+    width: 100%;
+    font-size: 20px;
+    padding-right: 0px;
+  }
+  .video .wrap .video-item .txt {
+    width: 100%;
+  }
+  .video .wrap .video-item .pic {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+html {
+  overflow-y: scroll;
+}
+
+.vision {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.vision .searchBox {
+  width: 100%;
+  padding: 50px 10px 20px;
+  font-size: 0;
+}
+.vision .searchBox input {
+  width: 260px;
+  height: 30px;
+  background: #fff;
+  border: 1px solid #ddd;
+  padding-left: 10px;
+}
+.vision .searchBox .btnSearch {
+  width: 80px;
+  height: 29px;
+  background: #333;
+  color: #fff;
+  font: bold 12px/29px "arial";
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  margin-left: 5px;
+  transform: translateY(-1px);
+}
+.vision .loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  opacity: 1;
+  transition: 1s;
+}
+.vision .loading.off {
+  opacity: 0;
+}
+.vision .wrap {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: 1s;
+}
+.vision .wrap.on {
+  opacity: 1;
+  transform: translateY(0px);
+}
+.vision .wrap::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.vision .wrap li {
+  width: 25%;
+  float: left;
+  padding: 10px;
+}
+.vision .wrap li > div {
+  width: 100%;
+  background: #fff;
+  padding: 10px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.05);
+}
+.vision .wrap li > div img {
+  width: 100%;
+}
+.vision .wrap li > div .profile {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 0;
+  margin-right: 0;
+}
+.vision .wrap li > div .profile img {
+  width: 36px;
+}
+.vision .wrap li > div .profile span {
+  display: inline-block;
+  font: 12px/1;
+  margin-left: 5px;
+}
+.vision .wrap li > div p {
+  font: 18px/1.2 "Architects daughter";
+  color: #777;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1180px) {
+  .vision .wrap li {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 639px) {
+  .vision .wrap li {
+    width: 100%;
+  }
+}
+.about h3 {
+  font-size: 42px;
 }
 
 body {
@@ -434,9 +640,9 @@ nav {
   width: 100%;
   left: 50%;
   transform: translateX(-50%);
-  width: 1200px;
   color: #fff;
   z-index: 9;
+  max-width: 1200px;
 }
 nav ul {
   display: flex;
@@ -446,6 +652,12 @@ nav ul {
 nav .sect_wrap {
   width: 1200px;
   margin: 0 auto;
+}
+
+@media (max-width: 639px) {
+  nav ul {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

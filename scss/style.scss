@@ -1,6 +1,10 @@
 @import 'reset';
 @import 'index';
 @import 'sub';
+@import 'pop';
+@import 'video';    
+@import 'vision';
+@import 'about';
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Roboto+Condensed:wght@700&display=swap');
 
 
@@ -27,9 +31,9 @@ nav {
     width:100%;
     left:50%;
     transform:translateX(-50%);
-    width:1200px;
     color:#fff;
     z-index:9;
+    max-width:1200px;
     
     ul {
         display:flex;
@@ -42,3 +46,10 @@ nav {
     }
 }
 
+@media (max-width:$mobile) {
+    nav {
+        ul {
+            display:none;
+        }
+    }
+}
