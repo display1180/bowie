@@ -77,7 +77,7 @@
         </div>
         <div class="sect sect4">
             <div class="sect_wrap">
-                <p class="sound" >SOUND + VISION</p>
+                <p class="sound" >SOUND + VISION &nbsp;SOUND + VISION</p>
             </div>
         </div>
         <div class="sect sect5">
@@ -173,5 +173,25 @@ like a definition of pop to me.<br>
             </div>
         </div>
     </main>
+    <script>
+        const sec4 = document.querySelector('.sect4');
+        const baseline = -750;
+        const soundVision = document.querySelector('.sound');
+        console.log(sec4);
+
+        window.addEventListener('scroll', sec4_custom_scroll);
+        function sec4_custom_scroll() {
+        const scroll = window.scrollY;
+        
+
+        let scroll2 = (scroll - sec4.offsetTop - baseline)*2.2 ;
+        let scroll3 = scroll2 + 50
+        
+        if (scroll > sec4.offsetTop + baseline) {
+            soundVision.style.transform = `translateY(-50%) translateX(${-scroll2}px)`;
+        } else {
+        }
+    }
+    </script>
 </body>
 </html>

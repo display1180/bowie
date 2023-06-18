@@ -1,0 +1,116 @@
+.sound {
+    overflow-y:hidden;
+    #sound {
+        display:flex;
+        height:100vh; 
+        .ui {
+            height:100vh;
+            position:relative;
+            
+
+            &.left {
+                width: 100vh;
+                img {
+                    max-width:100%;
+                    height:100%;
+                    object-fit:cover;
+                }
+                a {
+                    position:absolute;
+                    bottom:100px;
+                    left:100px;
+                    color:#fff;
+
+                    i {
+                        padding-right:10px;
+                    }
+                }
+            }
+
+            &.right {
+                padding: 140px 0 60px 0;
+                max-height:100vh;
+                width:75vh;
+                
+                
+                
+
+                h3 {
+                    font-size: 42px;
+                    padding-bottom:60px;
+                    padding-left: 100px;
+                }
+                h6 {
+                    padding-left:100px;
+                }
+                ul {
+                    height: 30vh;
+                    overflow-y:scroll;
+                    border-bottom:1px solid #ddd;
+                    
+                    li {
+                        line-height: 60px;
+                        border-bottom: 1px solid #ddd;
+                        padding-left: 100px; 
+    
+                        &:last-child {
+                            border-bottom:none;
+                        }
+                        a {
+                            display:flex;
+                            justify-content:space-between;
+                            align-items:center;
+                            
+                            &> * {
+                                flex: 1;
+                            }
+                            &> .songName {
+                                flex:5;
+                            }
+                        }
+                        i {
+                        }
+                        span.songNumber {
+                        }
+                        span.songName {
+                        }
+                        span.songTime {
+                        }
+    
+                    }
+                }
+                
+                .play {
+                    padding-left:100px;
+                    padding-top: 60px;
+                    line-height: 60px;
+                     
+                    .label {
+                        display:flex;
+                        justify-content:space-between;
+
+                        .left {
+                            flex: 4;
+                            
+                            span {
+                                padding-right: 50px;
+                            }
+                        }
+                        .right {
+                            flex:1 ;
+                        }
+                    }
+
+                    .player {
+                        display:flex;
+                        gap:20px;
+
+                        .fa-forward-step {
+                            transform:translateX(-2px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

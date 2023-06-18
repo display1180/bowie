@@ -5,6 +5,7 @@
 @import 'video';    
 @import 'vision';
 @import 'about';
+@import 'sound';
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Roboto+Condensed:wght@700&display=swap');
 
 
@@ -33,7 +34,7 @@ nav {
     transform:translateX(-50%);
     color:#fff;
     z-index:9;
-    max-width:1200px;
+    padding: 0 40px;
     
     ul {
         display:flex;
