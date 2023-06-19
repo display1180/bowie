@@ -650,9 +650,9 @@ html {
   padding-right: 10px;
 }
 .sound #sound .ui.right {
-  padding: 140px 0 60px 0;
+  padding: 200px 0 60px 0;
   max-height: 100vh;
-  width: 75vh;
+  width: calc(100% - 100vh);
 }
 .sound #sound .ui.right h3 {
   font-size: 42px;
@@ -663,9 +663,14 @@ html {
   padding-left: 100px;
 }
 .sound #sound .ui.right ul {
-  height: 30vh;
+  height: 300px;
   overflow-y: scroll;
   border-bottom: 1px solid #ddd;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.sound #sound .ui.right ul::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
 }
 .sound #sound .ui.right ul li {
   line-height: 60px;
@@ -704,11 +709,11 @@ html {
 .sound #sound .ui.right .play .label .right {
   flex: 1;
 }
-.sound #sound .ui.right .play .player {
+.sound #sound .ui.right .play .player .left {
   display: flex;
   gap: 20px;
 }
-.sound #sound .ui.right .play .player .fa-forward-step {
+.sound #sound .ui.right .play .player .left .fa-forward-step {
   transform: translateX(-2px);
 }
 
@@ -743,6 +748,13 @@ nav ul {
 nav .sect_wrap {
   width: 1200px;
   margin: 0 auto;
+}
+nav a {
+  max-width: 60px;
+}
+nav a img {
+  width: 100px;
+  padding-top: 15px;
 }
 
 @media (max-width: 639px) {

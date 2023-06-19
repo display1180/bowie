@@ -28,10 +28,9 @@
             }
 
             &.right {
-                padding: 140px 0 60px 0;
+                padding: 200px 0 60px 0;
                 max-height:100vh;
-                width:75vh;
-                
+                width:calc(100% - 100vh);
                 
                 
 
@@ -44,9 +43,15 @@
                     padding-left:100px;
                 }
                 ul {
-                    height: 30vh;
+                    height: 300px;
                     overflow-y:scroll;
                     border-bottom:1px solid #ddd;
+                    -ms-overflow-style: none; /* IE and Edge */
+                    scrollbar-width: none; /* Firefox */
+                
+                &::-webkit-scrollbar {
+                    display: none; /* Chrome, Safari, Opera*/
+                }
                     
                     li {
                         line-height: 60px;
@@ -73,6 +78,7 @@
                         span.songNumber {
                         }
                         span.songName {
+
                         }
                         span.songTime {
                         }
@@ -102,12 +108,15 @@
                     }
 
                     .player {
-                        display:flex;
-                        gap:20px;
-
-                        .fa-forward-step {
-                            transform:translateX(-2px);
+                        .left {
+                            display:flex;
+                            gap:20px;
+    
+                            .fa-forward-step {
+                                transform:translateX(-2px);
+                            }
                         }
+                        
                     }
                 }
             }

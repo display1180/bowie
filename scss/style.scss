@@ -40,10 +40,19 @@ nav {
         display:flex;
         flex-direction:row;
         gap: 20px;
+        
     }
     .sect_wrap {
         width:1200px;
         margin:0 auto;
+    }
+    a {
+        max-width: 60px;
+
+        img {
+            width:100px;
+            padding-top:15px;
+        }
     }
 }
 
