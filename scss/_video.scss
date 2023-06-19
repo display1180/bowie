@@ -1,33 +1,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100&display=swap');
 
 .video {
-		.wrap {
-            .video-item {
-                display:flex;
-                gap: 30px;
-                padding-bottom: 120px;
+		// .wrap {
+        //     .video-item {
+        //         display:flex;
+        //         gap: 30px;
+        //         padding-bottom: 120px;
                 
-                .pic {
-                    width:50%;
-                }
-                .txt {
-                    width:50%;
-                    display:flex;
-                    flex-direction:column;
-                    justify-content:center;
-                }
-                h3 {
-                    font-size: 42px;
-                    padding-bottom: 20px;
-                }
-                span {
-                    padding-top:20px;
-                }
-                img {
-                    width:100%;
-                }
-            }
-		}
+        //         .pic {
+        //             width:50%;
+        //         }
+        //         .txt {
+        //             width:50%;
+        //             display:flex;
+        //             flex-direction:column;
+        //             justify-content:center;
+        //         }
+        //         h3 {
+        //             font-size: 42px;
+        //             padding-bottom: 20px;
+        //         }
+        //         span {
+        //             padding-top:20px;
+        //         }
+        //         img {
+        //             width:100%;
+        //         }
+        //     }
+		// }
+
+        .container {
+            margin-top:150px;
+            padding-top:200px;
+            height:calc(100vh - 150px);
+            overflow-y:hidden;
+        }
+        .block {
+            position:relative;
+            width:580px;
+            height:460px;
+            margin:10px 300px 20px 80px;
+            background:red;
+        }
+
+        .sect9 {
+            position:fixed;
+            bottom:0;
+            width:100%;
+        }
 }
 
 @media screen and (max-width: $tablet) {

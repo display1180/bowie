@@ -103,5 +103,13 @@ secs.forEach((_), idx) => {
 	}
 }
 
-
+function moveScroll(idx) {
+	enableEvent = false;
+	new Anime(window, {
+		prop: 'scroll',
+		value: secs[idx].offsetTop,
+		duration: speed,
+		callback : () => (enableEvent = true),
+	});
+}
 */

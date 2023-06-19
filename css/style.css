@@ -454,28 +454,22 @@ a {
   cursor: pointer;
 }
 
-.video .wrap .video-item {
-  display: flex;
-  gap: 30px;
-  padding-bottom: 120px;
+.video .container {
+  margin-top: 150px;
+  padding-top: 200px;
+  height: calc(100vh - 150px);
+  overflow-y: hidden;
 }
-.video .wrap .video-item .pic {
-  width: 50%;
+.video .block {
+  position: relative;
+  width: 580px;
+  height: 460px;
+  margin: 10px 300px 20px 80px;
+  background: red;
 }
-.video .wrap .video-item .txt {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.video .wrap .video-item h3 {
-  font-size: 42px;
-  padding-bottom: 20px;
-}
-.video .wrap .video-item span {
-  padding-top: 20px;
-}
-.video .wrap .video-item img {
+.video .sect9 {
+  position: fixed;
+  bottom: 0;
   width: 100%;
 }
 
