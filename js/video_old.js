@@ -1,15 +1,19 @@
-const wrap = document.querySelector('.video .wrap');
-
-var blocks = document.getElementsByClassName('block');
-var container = document.getElementsByClassName('container');
-var hs = new HorizontalScroll.default({
-	blocks : blocks,
-	container: container,
-	isAnimated: true,
-	springEffect: 0.8
-});
+const wrap = document.querySelector('.video .container');
 
 fetchData();
+
+	// const key = 'AIzaSyCF8SOz4Cchg53VOMXZe0un2AC7zEP2apU';
+	// const list = 'PLw7h_PSATrFsUKd0EJLE9yF8S1NdmrdJK';
+	// const num = 10;
+	// const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${list}&key=${key}&maxResults=${num}`;
+
+	// fetch(url)
+	// .then(data=>{
+	// 	const dataJson = data.json()
+	// 	console.log('dataJson',dataJson)
+	// 	createList(dataJson)
+
+
 
 document.body.addEventListener('click', (e) => {
 	if (e.target.className === 'thumb') createPop(e.target.getAttribute('alt'));
@@ -33,27 +37,41 @@ async function fetchData() {
 function createList(arr) {
 	let tags = '';
 
+	console.log(arr)
+
 	arr.forEach((item) => {
 		let tit = item.snippet.title;
 		let desc = item.snippet.description;
 		let date = item.snippet.publishedAt;
 
 		tags += `
-        <article class="video-item">
+		<article class='block'>
         <div class='pic'>
-            <img class='thumb' src=${item.snippet.thumbnails.standard.url} alt=${item.snippet.resourceId.videoId} />
+            <img class='thumb' src=${item.snippet.thumbnails.standard.url} alt=${
+			item.snippet.resourceId.videoId
+		} />
           </div> 
-          
-          <div class='txt'>
           <h3>${tit.length > 50 ? tit.substr(0, 50) + '...' : tit}</h3>
+          <div class='txt'>
             <p>${desc.length > 200 ? desc.substr(0, 200) + '...' : desc}</p>
             <span>${date.split('T')[0].split('-').join('.')}</span>
-          </div>  
-        </article>
+          </div> 
+		  </article> 
       `;
 	});
 
 	wrap.innerHTML = tags;
+
+	var blocks = document.getElementsByClassName('block');
+	var container = document.getElementsByClassName('container');
+	var hs = new HorizontalScroll.default({
+		blocks : blocks,
+		container: container,
+		isAnimated: true,
+		springEffect: 0.8
+	});
+	
+	
 }
 
 //동적으로 팝업 생성함수
@@ -79,3 +97,4 @@ function removePop() {
 	setTimeout(() => document.querySelector('.pop').remove(), 1000);
 	document.body.style.overflow = 'auto';
 }
+
