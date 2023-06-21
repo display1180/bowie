@@ -51,15 +51,17 @@ function createList(arr) {
 			item.snippet.resourceId.videoId
 		} />
           </div> 
-          <h3>${tit.length > 50 ? tit.substr(0, 50) + '...' : tit}</h3>
-          <div class='txt'>
-            <p>${desc.length > 200 ? desc.substr(0, 200) + '...' : desc}</p>
-            <span>${date.split('T')[0].split('-').join('.')}</span>
-          </div> 
+         
+          
 		  </article> 
       `;
 	});
-
+/*
+ <h3>${tit.length > 50 ? tit.substr(0, 50) + '...' : tit}</h3>
+ <div class='txt'>
+            <p>${desc.length > 200 ? desc.substr(0, 200) + '...' : desc}</p>
+            <span>${date.split('T')[0].split('-').join('.')}</span>
+          </div>  */
 	wrap.innerHTML = tags;
 
 	var blocks = document.getElementsByClassName('block');

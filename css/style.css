@@ -18,6 +18,7 @@ a {
 .sect {
   letter-spacing: -0.02em;
   font-size: 16px;
+  color: #fff;
 }
 .sect h2 {
   font-size: 120px;
@@ -46,21 +47,26 @@ a {
   color: #fff;
 }
 .sect.sect1 .sect_wrap {
-  width: 1200px;
+  width: 100%;
+  padding-left: 40px;
+  max-width: none;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding-bottom: 100px;
+  padding-bottom: 40px;
 }
 .sect.sect1 .sect_wrap h2 {
   letter-spacing: 0;
+  font-size: 82px;
 }
 .sect.sect1 .sect_wrap p {
-  font-size: 42px;
+  font-size: 24px;
 }
 .sect.sect2 {
   padding: 180px;
   height: 100vh;
+  background: #ff6c00;
+  color: #000;
 }
 .sect.sect2 .sect_wrap {
   width: 1000px;
@@ -71,6 +77,7 @@ a {
 .sect.sect3 {
   font-size: 72px;
   min-height: 100vh;
+  padding-top: 100px;
   margin-bottom: 180px;
 }
 .sect.sect3 .row {
@@ -104,6 +111,7 @@ a {
   justify-content: center;
   align-items: center;
   position: relative;
+  background: #000;
 }
 .sect.sect4 .sound {
   font-size: 24vw;
@@ -112,10 +120,13 @@ a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  color: #0059ff;
 }
 .sect.sect5 {
   display: flex;
   padding: 180px 0;
+  background: #fff;
+  color: #000;
 }
 .sect.sect5 .sect_wrap {
   position: relative;
@@ -163,7 +174,7 @@ a {
 }
 .sect.sect6 {
   text-align: center;
-  padding-bottom: 180px;
+  padding: 180px 0;
 }
 .sect.sect6 p {
   font-size: 42px;
@@ -197,6 +208,8 @@ a {
 .sect.sect8 {
   padding-top: 180px;
   padding-bottom: 180px;
+  background: #fff;
+  color: #000;
 }
 .sect.sect8 .row {
   padding-top: 30px;
@@ -214,8 +227,14 @@ a {
   font-size: 24px;
   padding-top: 60px;
 }
+.sect.sect9 {
+  background: #fff;
+  color: #000;
+}
 .sect.sect9 .sect_wrap {
   width: 100%;
+  max-width: 100%;
+  padding: 0 40px;
 }
 .sect.sect9 .motto {
   padding: 100px 60px;
@@ -406,8 +425,11 @@ a {
 }
 .sub .sect h2 {
   max-width: 1200px;
-  margin: 200px auto;
+  margin: 200px 40px;
   letter-spacing: -0.03em;
+}
+.sub .sect .sect_wrap {
+  max-width: none;
 }
 
 @media screen and (max-width: 1180px) {
@@ -454,23 +476,36 @@ a {
   cursor: pointer;
 }
 
+.video .sect h2 {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
 .video .container {
-  margin-top: 150px;
   padding-top: 200px;
-  height: calc(100vh - 150px);
   overflow-y: hidden;
+  height: 400px;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.video .container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
 }
 .video .block {
   position: relative;
-  width: 580px;
-  height: 460px;
-  margin: 10px 300px 20px 80px;
-  background: red;
+  width: 550px;
+  height: 360px;
+  margin: 0 40px 0 40px;
+  cursor: pointer;
+}
+.video .block img {
+  width: 100%;
 }
 .video .sect9 {
   position: fixed;
   bottom: 0;
   width: 100%;
+  color: #fff;
+  background: #000;
 }
 
 @media screen and (max-width: 1180px) {
@@ -517,7 +552,7 @@ html {
 }
 .vision .searchBox {
   width: 100%;
-  padding: 50px 10px 20px;
+  padding: 50px 40px 20px;
   font-size: 0;
 }
 .vision .searchBox input {
@@ -530,6 +565,7 @@ html {
 .vision .searchBox .btnSearch {
   width: 80px;
   height: 29px;
+  margin-left: 40px;
   background: #333;
   color: #fff;
   font: bold 12px/29px "arial";
@@ -538,6 +574,9 @@ html {
   cursor: pointer;
   margin-left: 5px;
   transform: translateY(-1px);
+}
+.vision .btnSet {
+  padding: 0 40px;
 }
 .vision .loading {
   position: absolute;
@@ -554,6 +593,7 @@ html {
   opacity: 0;
   transform: translateY(100px);
   transition: 1s;
+  margin: 30px;
 }
 .vision .wrap.on {
   opacity: 1;
@@ -600,6 +640,10 @@ html {
   margin-top: 10px;
   margin-bottom: 20px;
 }
+.vision .sect.sect9 .sect_wrap {
+  color: #fff;
+  background: #000;
+}
 
 @media screen and (max-width: 1180px) {
   .vision .wrap li {
@@ -614,9 +658,26 @@ html {
 .about h3 {
   font-size: 42px;
 }
+.about .sect .sect_wrap {
+  width: 100%;
+  padding: 0 40px;
+}
+.about .sect.sect9 {
+  color: #fff;
+  background: #000;
+}
 
 .sound {
   overflow-y: hidden;
+}
+.sound .cover-bg {
+  width: 100vw;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: blur(20px);
+  opacity: 0.3;
 }
 .sound #sound {
   display: flex;
@@ -627,12 +688,14 @@ html {
   position: relative;
 }
 .sound #sound .ui.left {
-  width: 100vh;
+  width: 94vh;
+  padding: 100px 40px 40px 40px;
 }
 .sound #sound .ui.left img {
   max-width: 100%;
   height: 100%;
   object-fit: cover;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.15);
 }
 .sound #sound .ui.left a {
   position: absolute;
@@ -646,49 +709,64 @@ html {
 .sound #sound .ui.right {
   padding: 200px 0 60px 0;
   max-height: 100vh;
-  width: calc(100% - 100vh);
+  width: calc(100% - 94vh);
+  display: flex;
 }
 .sound #sound .ui.right h3 {
-  font-size: 42px;
-  padding-bottom: 60px;
-  padding-left: 100px;
+  font-size: 52px;
+  padding-bottom: 71px;
+  opacity: 0.15;
+}
+.sound #sound .ui.right h3.active {
+  opacity: 1;
 }
 .sound #sound .ui.right h6 {
-  padding-left: 100px;
+  padding-left: 80px;
 }
-.sound #sound .ui.right ul {
-  height: 300px;
+.sound #sound .ui.right .title {
+  height: 700px;
+}
+.sound #sound .ui.right .list {
+  width: 100%;
+  padding-right: 40px;
+  margin-right: 40px;
+}
+.sound #sound .ui.right .list ul {
+  width: calc(100% - 40px);
+  height: 485px;
   overflow-y: scroll;
-  border-bottom: 1px solid #ddd;
+  margin-right: 40px;
+  margin-left: 80px;
+  border-bottom: 1px solid #333;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
-.sound #sound .ui.right ul::-webkit-scrollbar {
+.sound #sound .ui.right .list ul::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera*/
 }
-.sound #sound .ui.right ul li {
+.sound #sound .ui.right .list ul li {
   line-height: 60px;
-  border-bottom: 1px solid #ddd;
-  padding-left: 100px;
+  border-bottom: 1px solid #333;
+  padding-left: 40px;
 }
-.sound #sound .ui.right ul li:last-child {
+.sound #sound .ui.right .list ul li:last-child {
   border-bottom: none;
 }
-.sound #sound .ui.right ul li a {
+.sound #sound .ui.right .list ul li a {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.sound #sound .ui.right ul li a > * {
+.sound #sound .ui.right .list ul li a > * {
   flex: 1;
 }
-.sound #sound .ui.right ul li a > .songName {
+.sound #sound .ui.right .list ul li a > .songName {
   flex: 5;
 }
 .sound #sound .ui.right .play {
   padding-left: 100px;
-  padding-top: 60px;
   line-height: 60px;
+  padding-top: 20px;
 }
 .sound #sound .ui.right .play .label {
   display: flex;
@@ -714,9 +792,10 @@ html {
 body {
   font-family: "Roboto Condensed", sans-serif;
   overflow-x: hidden;
+  background: #000;
 }
 body.sub nav {
-  color: #333;
+  color: #fff;
 }
 
 nav {
@@ -726,7 +805,7 @@ nav {
   line-height: 60px;
   align-items: center;
   position: fixed;
-  top: 20px;
+  top: 10px;
   width: 100%;
   left: 50%;
   transform: translateX(-50%);
@@ -747,7 +826,7 @@ nav a {
   max-width: 60px;
 }
 nav a img {
-  width: 100px;
+  width: 80px;
   padding-top: 15px;
 }
 

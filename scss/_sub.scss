@@ -2,8 +2,12 @@
     .sect{    
         h2 {
             max-width:1200px;
-            margin:200px auto;
+            margin:200px 40px;
             letter-spacing:-0.03em;
+        }
+        .sect_wrap {
+            max-width:none;
+
         }
     }
     
